@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GetDressed: Profile Input</title>  
+	<meta charset="utf-8"/>
+  
+  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css" />
+  <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="js/input.js"></script>
+  
+  <script src="../StudyConditions.js"></script>
+  
+</head>
+<body>
+  <div id="content">
+    <div id="logo">
+    </div>
+    <div id = "slideArea">
+      <div id='info' class='slide'>
+        <h1>Welcome to GetDressed!</h1>
+        <div id='name' class='slideSegment'>
+          <h2>What is your name?</h2>
+          <h2>
+          <input id='nameInput' type='text' onkeyup='getInput(event)'>
+          <button id='nameButton' onclick='getInput(event)'>></button>
+          </h2>
+        </div>
+        <div id='age' class='slideSegment'>
+          <h2>What is your age?</h2>
+          <h2>
+          <input id='ageInput' type='number' min='1' max='100' onkeyup='getInput(event)'>
+          <button id='ageButton' onclick='getInput(event)'>></button>
+          </h2>
+        </div>
+        <div id='gender' class='slideSegment'>
+          <h2>What is your gender?</h2>
+          <h2>
+          <form>
+          <input id='genderM' type='radio' name='Male' onclick='getInput(event)'> Male
+          <input id='genderF' type='radio' name='Female' onclick='getInput(event)'> Female<br>
+          </form>
+          </h2>
+        </div>
+        <h2>
+        <button id='endInfo' onclick='nextSlide(event)'>Next</button>
+        </h2>
+      </div>
+      <div id='color' class='slide'>
+        <h1>Let's figure out your favorite colors!</h1>
+        <h2>Drag and drop the following colors to rank them from your favorite to least favorite!</h2>
+        <div id='colorList'>
+          <div id='color-red' class='colorOption' style='background-color:red'></div>
+          <div id='color-green' class='colorOption' style='background-color:green'></div>
+          <div id='color-blue' class='colorOption' style='background-color:blue'></div>
+          <div id='color-yellow' class='colorOption' style='background-color:yellow'></div>
+          <div id='color-orange' class='colorOption' style='background-color:orange'></div>
+          <div id='color-white' class='colorOption' style='background-color:white'></div>
+          <div id='color-black' class='colorOption' style='background-color:black'></div>
+          <div id='color-grey' class='colorOption' style='background-color:grey'></div>
+        </div>
+        <h2>
+        <button id='endColor' onclick='nextSlide(event)'>Next</button>
+        </h2>
+      </div>
+      <div id='style' class='slide'>
+        <h1>Select the styles that are most like your own!</h1>
+        <div id='styleList'>
+          <!--<img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style1.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style2.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style3.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style4.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style5.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style6.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style7.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style8.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style9.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style10.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style11.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style12.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style13.jpg'>
+          <img class='styleImage' height='150px' onclick="selectImage(event)" src='images/styles/style14.jpg'>-->
+        </div>
+        <h2>
+        <button id='endStyle' onclick='nextSlide(event)'>next</button>
+        </h2>
+      </div>
+      <div id='done' class='slide'>
+        <h1>Congradulations! You've finished setting up your GetDressed profile!</h1>
+        <h2>Time to buld your virtual wardrobe!</h2>
+        <h1>
+        <button id='gotoVirtualShopping' class="nextPageButton" onclick='nextPage(event)'>Go to Virtual Shopping Mode</button>
+        </h1>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

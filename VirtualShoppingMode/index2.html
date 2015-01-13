@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>GetDressed: Virtual Shopping Mode</title>
+		<meta charset="utf-8">
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="">
+		<meta name="author" content="ifeiyuyu">
+
+		<link href="css/reset.css" rel="stylesheet" type="text/css">
+		<link href="css/VirtualShoppingMode.css" rel="stylesheet" type="text/css">
+
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<!-- <script type="text/javascript" src="js/imageURLs.js"></script> -->
+		<script type="text/javascript" src="js/Ladies.js"></script>
+		<!-- <script type="text/javascript" src="js/Men.js"></script> -->
+		<script type="text/javascript" src="js/RandomWardrobeLadies.js"></script>
+		<script type="text/javascript" src="js/wardrobeModel.js"></script>
+  
+    <script src="../StudyConditions.js"></script>
+  
+	</head>
+
+	<body>
+		<div id="content">
+			<div id="RightSide">
+				<div id="LogoImage"><img src="images/ui/logo.png" draggable='false' style="cursor:pointer" onclick="goHome()">
+				</div>
+				<p>
+					Drag items into Closet!
+				</p>
+				<div id="ClosetPic">
+					<img src="images/ui/closet_ladies.png" draggable='false'"  ></div>
+
+					<p id="ClothingNum">
+					60
+					</p>
+					Items in your closet!
+
+					<div id="chooseversion" style="position: relative " >
+					<!-- <p>
+					Different Versions
+					</p> -->
+					<p id="Wardrobe1" class="WVersion" onclick="show(0)">
+					Wardrobe1</p>
+					<p id="Wardrobe2" class="WVersion" onclick="show(1)">
+					Wardrobe2</p>
+					</div>
+					<p id="finish" onclick="finish()"> Done! </p>
+					</div>
+					<!-- rightside. -->
+
+					<div id="main">
+					<!-- <div id="search" class="CataClothing">
+					<div class="CataName">SEARCH
+					<input id="searchBox" placeholder="Find clothes online."/>
+					<button onclick="searchFromOnline();">Go</button>
+					</div>
+					<div class="clothingDis">
+					<div class="Container" id="SearchImages">
+					</div>
+					</div>
+					</div> -->
+
+					<div id="tops" class="CataClothing">
+					<div class="CataName">
+					TOPS
+					</div>
+					<div class="clothingDis">
+					<div class="Container"></div>
+					</div>
+					</div>
+
+					<div id="ShirtsBlouses" class="CataClothing">
+					<div class="CataName">
+					SHIRTS & BLOUSES & SWEATERS
+					</div>
+					<div class="clothingDis">
+					<div class="Container"></div>
+					</div>
+					</div>
+
+					<div id="SkirtsShorts" class="CataClothing">
+					<div class="CataName">
+					SKIRTS & SHORTS
+					</div>
+					<div class="clothingDis">
+					<div class="Container"></div>
+					</div>
+					</div>
+
+					<div id="PantsJeans" class="CataClothing">
+					<div class="CataName">
+					PANTS & JEANS
+					</div>
+					<div class="clothingDis">
+					<div class="Container"></div>
+					</div>
+					</div>
+					<!-- <div id="dresses" class="CataClothing">
+					<div class="CataName">DRESSES</div>
+					<div class="clothingDis">
+					<div class="Container">
+					</div>
+					</div>
+					</div> -->
+					<div id="Sports" class="CataClothing">
+					<div class="CataName">
+					SPORTSWEAR
+					</div>
+					<div class="clothingDis">
+					<div class="Container"></div>
+					</div>
+					</div>
+
+					<div id="Office" class="CataClothing">
+					<div class="CataName">
+					OFFICEWEAR & DRESSES
+					</div>
+					<div class="clothingDis">
+					<div class="Container"></div>
+					</div>
+					</div>
+
+					<div id="outerwear" class="CataClothing">
+					<div class="CataName">
+					OUTER WEAR
+					</div>
+					<div class="clothingDis">
+					<div class="Container"></div>
+					</div>
+					</div>
+					<div id="shoes" class="CataClothing">
+					<div class="CataName">
+					SHOES
+					</div>
+					<div class="clothingDis">
+					<div class="Container"></div>
+					</div>
+					</div>
+					<!-- <div id="accessories" class="CataClothing">
+					<div class="CataName">ACCESORIES</div>
+					<div class="clothingDis">
+					<div class="Container">
+					</div>
+					</div>
+					</div> -->
+
+					</div>
+					<!-- //main -->
+
+					<div id="wardrobe" onclick='hideWardrobe()'>
+					<h1>Here are the items in your wardrobe!</h1>
+					<div id="wtops" class="CataClothing">
+					<div class="CataName">
+					TOPS
+					</div>
+					<div class="clothingDis">
+					<div class="wContainer"></div>
+					</div>
+					</div>
+
+					<div id="wShirtsBlouses" class="CataClothing">
+					<div class="CataName">
+					SHIRTS & BLOUSES & SWEATERS
+					</div>
+					<div class="clothingDis">
+					<div class="wContainer"></div>
+					</div>
+					</div>
+
+					<div id="wSkirtsShorts" class="CataClothing">
+					<div class="CataName">
+						SKIRTS & SHORTS
+					</div>
+					<div class="clothingDis">
+						<div class="wContainer"></div>
+					</div>
+				</div>
+
+				<div id="wPantsJeans" class="CataClothing">
+					<div class="CataName">
+						PANTS & JEANS
+					</div>
+					<div class="clothingDis">
+						<div class="wContainer"></div>
+					</div>
+				</div>
+				<!-- <div id="dresses" class="CataClothing">
+				<div class="CataName">DRESSES</div>
+				<div class="clothingDis">
+				<div class="Container">
+				</div>
+				</div>
+				</div> -->
+				<div id="wSports" class="CataClothing">
+					<div class="CataName">
+						SPORTSWEAR
+					</div>
+					<div class="clothingDis">
+						<div class="wContainer"></div>
+					</div>
+				</div>
+
+				<div id="wOffice" class="CataClothing">
+					<div class="CataName">
+						OFFICEWEAR & DRESSES
+					</div>
+					<div class="clothingDis">
+						<div class="wContainer"></div>
+					</div>
+				</div>
+
+				<div id="wouterwear" class="CataClothing">
+					<div class="CataName">
+						OUTER WEAR
+					</div>
+					<div class="clothingDis">
+						<div class="wContainer"></div>
+					</div>
+				</div>
+				<div id="wshoes" class="CataClothing">
+					<div class="CataName">
+						SHOES
+					</div>
+					<div class="clothingDis">
+						<div class="wContainer"></div>
+					</div>
+				</div>
+
+			</div>
+			<!-- //wardrobe -->
+
+		</div>
+	</body>
+</html>

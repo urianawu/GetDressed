@@ -1,0 +1,102 @@
+html {
+height: 100%;
+}
+
+body {
+height: 100%;
+background-image: url('../images/backgrounds/bg2.png');
+}
+
+h1 {
+font-family: sans-serif;
+font-size: 2em;
+text-align: center;
+padding-top: 30px;
+padding-bottom: 20px;
+}
+
+h2 {
+top: 20px;
+font-family: sans-serif;
+font-size: 1.5em;
+text-align: center;
+padding-top: 20px;
+}
+
+form {
+font-size: 1em;
+}
+
+#content {
+height: 100%;
+width: 50%;
+min-width: 600px;
+margin-left: auto;
+margin-right: auto;
+background-color: ivory;
+/*background-color: #F5FAFF;*/
+}
+
+#logo {
+height: 172px;
+width: 208px;
+margin-left: auto;
+margin-right: auto;
+background-image: url('../images/logo.gif');
+}
+
+#slideArea {
+width: 100%;
+}
+
+.slide {
+position: relative;
+/*top: 50px;*/
+height: 500px;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+/*background-color: ivory;*/
+display: none;
+}
+
+.slideSegment {
+display: none;
+}
+
+#endInfo {
+display: none;
+}
+
+#colorList {
+padding-top: 30px;
+width: 200px;
+height: 260px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.colorOption {
+height: 25px;
+width: 200px;
+margin: 4px;
+border: 1px solid black;
+}
+
+#styleList {
+height: 340px;
+overflow-x: hidden;
+overflow-y: scroll;
+}
+
+.styleImage {
+margin: 3px;
+}
+
+.styleImage:hover {
+box-shadow: 5px 5px 15px #888888;
+}
+
+.nextPageButton {
+font-size: 1.2em;
+}

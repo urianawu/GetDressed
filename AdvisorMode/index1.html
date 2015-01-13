@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>GetDressed: Shopping Advisor Mode</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/main_noContext.css">
+
+		<script type="text/javascript" src="js/recommend.js"></script>
+
+		<!-- get weather-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/getWeather.js"></script>
+		<script type="text/javascript" src="js/jquery.simpleWeather.js"></script>
+		<script src="https://apis.google.com/js/client.js"></script>
+		<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+		<script></script>
+		<script language="JavaScript" type="text/javascript"></script>
+
+<style> 
+@font-face
+{
+font-family: Cochin;
+src: url(font/Cochin.TTF);
+}
+
+@font-face
+{
+font-family: Athelas;
+src: url(font/Athelas-Regular.ttf);
+}
+
+div
+{
+font-family:Cochin;
+}
+
+div{
+font-family: Athelas;
+}
+</style>
+	</head>
+
+	<body>
+
+		<div id="main">
+			<div id="homeButton" onclick="goHome()"></div>
+
+			<div id="picArea">
+				<img src="data/index_bg_noContext.png" style="height:100%;" />
+				<img id="left" src="data/left.png" onclick="backward()">
+				<div id="clothes">
+					<img id="top" src="">
+					<img id="bottom" src="">
+					<img id="dress" src="">
+					<img id="shoes" src="">
+					<img id="umbrella" src="">
+				</div>        
+				<img id="right" src="data/right.png" onclick="forward()">
+			</div>
+			</a>
+      
+		</div>
+		<script type="text/javascript">
+            setup();
+		</script>
+
+	</body>
+
+</html>
